@@ -1,13 +1,16 @@
 import {createStore } from 'vuex'
-import auth from './modules/auth'
+import modules from './modules'
 import actions from './actions'
 import getters from './getters'
 
 export default createStore({
-    actions,
-    modules: {
-        auth,
+    state: () => {
+        return {
+            hello: 'world'
+        }
     },
+    actions,
+    modules,
     getters,
     strict: true,
     plugins: [],
